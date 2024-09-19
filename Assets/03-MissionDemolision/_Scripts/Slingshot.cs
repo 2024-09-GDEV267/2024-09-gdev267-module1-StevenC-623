@@ -72,6 +72,7 @@ public class Slingshot : MonoBehaviour
             FallowCam.POI = projectile;
             Instantiate<GameObject>(projLinePrefab, projectile.transform);
             projectile = null;
+            MissionDemolition.SHOT_FIRED();
         }
 
     }
