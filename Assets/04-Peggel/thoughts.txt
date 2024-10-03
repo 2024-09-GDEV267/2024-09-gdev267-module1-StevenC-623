@@ -1,0 +1,69 @@
+Peggel?
+shooter
+-mouse directed
+	-clamped 180-359?
+	-aiming mode?
+	-mouse down
+	-mouse up
+-projection of shooter line
+-force control
+
+ball
+-physics(bouncy) (sphere collider)-physMAT
+-baket interaction
+-falloff map
+
+basket
+-rim
+-"goal"
+
+block
+-type
+-removal
+-placement
+
+walls
+
+UI
+-balls count
+-score
+
+Cam
+-orthographic
+-fixed
+
+
+Manger
+-level complete
+-game lose
+
+wind up car?
+
+car object (making difficult)
+-mouse position fallow
+-"winded force"
+-isgrounded check
+	-if m1 down 
+	-+winded based on distance moved(clamp)
+	-save value
+	-if m1 up
+		-release winded force
+		-release from mouse pos
+-m1 up
+	release winded force
+-physics
+
+floor
+-loop
+-ramp at end XD
+
+UI
+-distance traveled
+
+Cam
+-ortho
+-moves with car
+
+game
+-restart?
+
