@@ -49,6 +49,7 @@ public class MissionDemolition : MonoBehaviour
         Goal.goalMet = false;
         UpdateGUI();
         mode = GameMode.playing;
+
         FallowCam.SWITCH_VIEW(FallowCam.eView.both);
 
     }
@@ -64,7 +65,9 @@ public class MissionDemolition : MonoBehaviour
         if ((mode == GameMode.playing) && Goal.goalMet)
         {
             mode = GameMode.levelEnd;
+
             FallowCam.SWITCH_VIEW(FallowCam.eView.both);
+
             Invoke("NextLevel", 2f);
         }
     }
