@@ -33,8 +33,9 @@ public class Cannon : MonoBehaviour
             ballRB.velocity =  direction * velocityMult;
             //decrease shot count in manager
             //(in manager) if shot count = 0 you lose
-            shootable = false;
-            StartCoroutine(ShotDelay(2f));
+            
+            //shootable = false;
+            //StartCoroutine(ShotDelay(2f));
         }
     }
     private IEnumerator ShotDelay(float delay)
