@@ -29,6 +29,9 @@ public class Ball : MonoBehaviour
         if(collidedWith.CompareTag("PinkBrick"))
         {
             StartCoroutine(BrickRemovalDelay(2f, collidedWith));
+            //Tell manager score +100
+            //(in manager) - test level to see if it has anymore pinkbricks
+            // if not- load a new level/ "you win"
         }
     }
     private IEnumerator BrickRemovalDelay(float delay,GameObject brick)
@@ -39,8 +42,6 @@ public class Ball : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("extraBall");
-
         GameObject collidedWith = other.gameObject;
         if (collidedWith.CompareTag("Hoop"))
         {
