@@ -26,11 +26,25 @@ public class Ball : MonoBehaviour
         {
             StartCoroutine(BrickRemovalDelay(2f,collidedWith));
         }
+        if(collidedWith.CompareTag("PinkBrick"))
+        {
+            StartCoroutine(BrickRemovalDelay(2f, collidedWith));
+        }
     }
     private IEnumerator BrickRemovalDelay(float delay,GameObject brick)
     {
         yield return new WaitForSeconds(delay);
         Destroy(brick);
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("extraBall");
+
+        GameObject collidedWith = other.gameObject;
+        if (collidedWith.CompareTag("Hoop"))
+        {
+            Debug.Log("extraBall");
+        }
     }
 }
